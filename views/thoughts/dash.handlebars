@@ -1,0 +1,25 @@
+<div class="dashboard">
+    <div class="title-container">
+        <h2>Dashboard</h2>
+        <a href="/thoughts/add" class="btn">criar pensamentos</a>
+    </div>
+    <h3>Seus Pensamentos</h3>
+    <ul>
+        {{#each thoughts}}
+            <li>
+                <span class="label">{{this.title}}</span>
+                <span class="actions">
+                    <a href="/thoughts/edit/{{this.id}}" class="btn">editar</a>
+                    <form action="/thoughts/remove" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                </span>
+            </li>
+        {{/each}}
+
+        {{#if isEmptyThoughts}}
+            <p>Está com a mente vázia, meu chapa? quando pensar em algo é só <a href="/thoughts/add">anotar</a> para não esquecer.</p>
+        {{/if}}
+    </ul>
+</div>
