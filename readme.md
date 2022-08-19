@@ -13,7 +13,7 @@
 </p>
 
 <div align="center" id="top"> 
-  <img src="public/assets/images/toughts_logo.png" alt="Mongodb" />
+  <img src="public/assets/images/HomeApp.png" alt="Mongodb" />
 
 </div>
 
